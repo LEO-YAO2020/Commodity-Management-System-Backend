@@ -15,7 +15,7 @@ module.exports = function (router) {
         if (p) {
           res.send({
             status: 1,
-            msg: '此名称商品已存在'
+            msg: 'product exist'
           })
         } else {
           ProductModel.create(product)
@@ -29,7 +29,7 @@ module.exports = function (router) {
               console.error('添加产品异常', error)
               res.send({
                 status: 1,
-                msg: '添加产品异常, 请重新尝试'
+                msg: 'something error, try again later'
               })
             })
         }
@@ -46,7 +46,7 @@ module.exports = function (router) {
       })
       .catch(error => {
         console.error('获取商品列表异常', error)
-        res.send({status: 1, msg: '获取商品列表异常, 请重新尝试'})
+        res.send({status: 1, msg: 'something error, try again later'})
       })
   })
 
@@ -65,7 +65,7 @@ module.exports = function (router) {
       })
       .catch(error => {
         console.error('搜索商品列表异常', error)
-        res.send({status: 1, msg: '搜索商品列表异常, 请重新尝试'})
+        res.send({status: 1, msg: 'something error, try again later'})
       })
   })
 
@@ -83,7 +83,7 @@ module.exports = function (router) {
         console.error('获取商品异常', error)
         res.send({
           status: 1,
-          msg: '获取商品异常'
+          msg: 'something error, try again later'
         })
       })
   })
@@ -97,7 +97,7 @@ module.exports = function (router) {
       })
       .catch(error => {
         console.error('更新商品异常', error)
-        res.send({status: 1, msg: '更新商品名称异常, 请重新尝试'})
+        res.send({status: 1, msg: 'something error, try again later'})
       })
   })
 

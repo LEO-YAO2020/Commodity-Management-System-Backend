@@ -50,19 +50,19 @@ router.post('/login', (req, res) => {
         }
 
       } else {// 登陆失败
-        res.send({status: 1, msg: '用户名或密码不正确!'})
+        res.send({status: 1, msg: 'username or password not correct!'})
       }
     })
     .catch(error => {
       console.error('登陆异常', error)
-      res.send({status: 1, msg: '登陆异常, 请重新尝试'})
+      res.send({status: 1, msg: 'something error, try again later'})
     })
 })
 
 router.post('/check_token',(req,res)=>{
    res.status(200).json({
       status: 0,
-      msg: 'token有效'
+      msg: 'token active'
     })
 })
 

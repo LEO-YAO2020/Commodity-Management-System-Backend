@@ -21,7 +21,7 @@ module.exports = function (req, res, next) {
   if (!token) {
     return res.status(401).json({
       status: 1,
-      msg: '你没有登录，需要登录才能使用'
+      msg: 'Please login'
     })
   }
 
@@ -36,7 +36,7 @@ module.exports = function (req, res, next) {
 
       return res.status(401).json({
         status: 2,
-        msg: 'token过期失效'
+        msg: 'token has expired'
       })
     } else {
       // 验证通过，添加到req上
