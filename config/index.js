@@ -42,7 +42,7 @@ if (isDev) {
 const UN_CHECK_PATHS = ['/test', '/login', '/manage/img/upload'];
 
 // token签名加密的私钥
-const PRIVATE_KEY = 'atguigu_token';
+const PRIVATE_KEY = 'Bearer_token';
 
 module.exports = {
   SERVER_CONFIG,

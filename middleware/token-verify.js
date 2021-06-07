@@ -26,7 +26,7 @@ module.exports = function (req, res, next) {
   }
 
   // 一开始值： atguigu_token  --> 截取后面token
-  token = token.slice(8);
+  token = token.slice(7);
 
   // 有token进行校验
   jwt.verify(token, PRIVATE_KEY, (err, data) => {
